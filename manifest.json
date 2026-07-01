@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Feature Flags Manager",
   "version": "1.0.0",
-  "description": "Easily view, toggle, and apply feature flags via the URL query string on any website, using a simple popup UI instead of editing the URL by hand.",
+  "description": "View, edit, and apply URL query feature flags on any http/https page from a simple popup UI.",
   "author": "Muhammad Zoabi",
   "action": {
     "default_popup": "src/popup.html",

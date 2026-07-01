@@ -43,5 +43,5 @@ archive.on('error', (err) => {
 
 archive.pipe(output);
 for (const file of FILES) archive.file(join(root, file), { name: file });
-for (const dir of DIRS) archive.directory(join(root, dir), dir.replace(`${sourceDir}/`, ''));
+for (const dir of DIRS) archive.directory(join(root, dir), dir);
 await archive.finalize();
