@@ -1,0 +1,12 @@
+{
+  "name": "feature-flags-manager",
+  "version": "1.0.0",
+  "description": "Easily view, toggle, and apply feature flags via the URL query string on any website.",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build-zip.mjs"
+  },
+  "devDependencies": {
+    "archiver": "^7.0.1"
+  }
+}

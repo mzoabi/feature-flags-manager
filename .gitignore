@@ -1,5 +1,9 @@
 # Packaged extension
 *.zip
+dist/
+
+# Node
+node_modules/
 
 # OS / editor cruft
 .DS_Store

@@ -38,33 +38,40 @@ pwsh -File tools/generate-icons.ps1
 
 ## Package for publishing
 
-Create a ZIP of the extension folder contents (manifest at the root of the zip):
+Build the publishable ZIP (with `manifest.json` at the root) into `dist/`:
 
 ```pwsh
-Compress-Archive -Path manifest.json,popup.html,popup.css,popup.js,icons -DestinationPath marketplace-feature-flags.zip -Force
+npm install   # first time only
+npm run build
 ```
+
+This produces `dist/feature-flags-manager.zip`, ready to upload to either store.
 
 ### Publish to Microsoft Edge Add-ons
 
 1. Go to the [Partner Center Edge program](https://partner.microsoft.com/dashboard/microsoftedge/).
-2. Create a new extension submission and upload `marketplace-feature-flags.zip`.
+2. Create a new extension submission and upload `dist/feature-flags-manager.zip`.
 3. Fill in listing details, privacy (no data collected), and submit for certification.
 
-### Publish to Chrome Web Store (optional)
+### Publish to Chrome Web Store
 
 1. Go to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole/).
-2. Create a new item and upload the same `marketplace-feature-flags.zip`.
+2. Create a new item and upload the same `dist/feature-flags-manager.zip`.
 3. Complete the listing and submit for review.
 
 ## Project layout
 
 ```
-marketplace-feature-flags/
+feature-flags-manager/
   manifest.json        # MV3 manifest
   popup.html           # popup UI
   popup.css            # styles
   popup.js             # logic (parse/merge/apply flags, favorites)
   icons/               # generated PNG icons
+  store/               # listing text, 300x300 logo, screenshots
   tools/
-    generate-icons.ps1 # icon generator
+    generate-icons.ps1       # icon generator
+    generate-store-logo.ps1  # store logo generator
+    build-zip.mjs            # npm build script (npm run build)
+  package.json
 ```
