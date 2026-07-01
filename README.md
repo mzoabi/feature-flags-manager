@@ -64,10 +64,11 @@ This produces `dist/feature-flags-manager.zip`, ready to upload to either store.
 ```
 feature-flags-manager/
   manifest.json        # MV3 manifest
-  popup.html           # popup UI
-  popup.css            # styles
-  popup.js             # logic (parse/merge/apply flags, favorites)
-  icons/               # generated PNG icons
+  src/
+    icons/             # generated PNG icons
+    popup.html         # popup UI
+    popup.css          # styles
+    popup.js           # logic (parse/merge/apply flags, favorites)
   store/               # listing text, 300x300 logo, screenshots
   tools/
     generate-icons.ps1       # icon generator

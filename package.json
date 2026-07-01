@@ -4,7 +4,7 @@
   "description": "Easily view, toggle, and apply feature flags via the URL query string on any website.",
   "private": true,
   "scripts": {
-    "build": "node tools/build-zip.mjs"
+    "build": "node tools/build-zip.mjs src"
   },
   "devDependencies": {
     "archiver": "^7.0.1"
