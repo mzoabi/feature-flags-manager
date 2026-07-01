@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace Feature Flags</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <span class="app-title">Feature Flags</span>
+      <span id="host-label" class="host-label"></span>
+    </header>
+
+    <div id="host-warning" class="host-warning" hidden>
+      This page doesn't support query-string flags (only http and https pages do).
+    </div>
+
+    <div id="flag-list" class="flag-list"></div>
+
+    <footer class="app-footer">
+      <button id="add-flag" class="add-flag" type="button">
+        <span class="plus">+</span> Add feature flag
+      </button>
+      <button id="apply" class="apply" type="button">Go!</button>
+    </footer>
+
+    <datalist id="common-values">
+      <option value="true"></option>
+      <option value="false"></option>
+    </datalist>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

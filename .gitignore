@@ -1,0 +1,8 @@
+# Packaged extension
+*.zip
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
