@@ -19,7 +19,7 @@ applies your selection by navigating the tab. Works on any `http`/`https` page.
 - **Go!** rebuilds the URL from the checked flags and navigates the current tab.
 - **Add feature flag** inserts a new empty row.
 
-Favorites are stored locally via `chrome.storage.local`. The extension collects no data.
+Favorites are stored locally via `chrome.storage.local`. The extension collects no data. See the privacy policy: https://mzoabi.github.io/feature-flags-manager/privacy-policy
 
 ## Load it locally (unpacked)
 
