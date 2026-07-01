@@ -12,6 +12,9 @@
   --success: #107c10;
   --row-hover: rgba(37, 104, 201, 0.08);
   --shadow: 0 18px 36px rgba(15, 47, 93, 0.2);
+  --radius-panel: 18px;
+  --radius-control: 12px;
+  --radius-pill: 999px;
 }
 
 * {
@@ -30,7 +33,7 @@ body {
   font-size: 13px;
   color: var(--text);
   background: radial-gradient(circle at 92% 0%, rgba(112, 179, 255, 0.75), transparent 34%), linear-gradient(135deg, #234f8f 0%, #2e67bf 48%, #5a9bf2 100%);
-  padding: 12px;
+  padding: 14px;
 }
 
 .app-header {
@@ -63,7 +66,7 @@ body {
   padding: 9px 12px;
   font-size: 12px;
   border: 1px solid rgba(148, 116, 0, 0.18);
-  border-radius: 8px;
+  border-radius: var(--radius-control);
   box-shadow: 0 8px 18px rgba(15, 47, 93, 0.12);
   margin-bottom: 10px;
 }
@@ -74,7 +77,7 @@ body {
   padding: 10px;
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 10px 10px 0 0;
+  border-radius: var(--radius-panel) var(--radius-panel) 0 0;
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
 }
@@ -84,7 +87,7 @@ body {
   align-items: center;
   gap: 8px;
   padding: 7px 8px;
-  border-radius: 8px;
+  border-radius: var(--radius-control);
   transition:
     background 140ms ease,
     box-shadow 140ms ease;
@@ -103,13 +106,18 @@ body {
   cursor: pointer;
 }
 
+.flag-active:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.95);
+  outline-offset: 2px;
+}
+
 .flag-name {
   flex: 1 1 auto;
   min-width: 0;
   height: 34px;
   padding: 7px 10px;
   border: 1px solid var(--border);
-  border-radius: 7px;
+  border-radius: var(--radius-pill);
   font-size: 12px;
   color: var(--text);
   background: #fff;
@@ -127,7 +135,7 @@ body {
   height: 34px;
   padding: 7px 10px;
   border: 1px solid var(--border);
-  border-radius: 7px;
+  border-radius: var(--radius-pill);
   font-size: 12px;
   color: var(--text);
   background: #fff;
@@ -152,7 +160,7 @@ body {
   background: transparent;
   cursor: pointer;
   color: var(--muted);
-  border-radius: 7px;
+  border-radius: 50%;
   padding: 0;
   transition:
     background 140ms ease,
@@ -190,7 +198,7 @@ body {
   padding: 10px;
   border-top: 1px solid rgba(28, 55, 92, 0.08);
   background: var(--surface-soft);
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 var(--radius-panel) var(--radius-panel);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
 }
@@ -205,7 +213,7 @@ body {
   align-items: center;
   gap: 6px;
   padding: 7px 8px;
-  border-radius: 7px;
+  border-radius: var(--radius-pill);
 }
 
 .add-flag:hover {
@@ -228,7 +236,7 @@ body {
   background: linear-gradient(180deg, var(--blue-light) 0%, var(--blue) 100%);
   color: #fff;
   border: none;
-  border-radius: 7px;
+  border-radius: var(--radius-pill);
   padding: 8px 20px;
   font-size: 13px;
   font-weight: 600;

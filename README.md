@@ -25,7 +25,7 @@ Favorites are stored locally via `chrome.storage.local`. The extension collects 
 
 1. Open `edge://extensions` (or `chrome://extensions`).
 2. Enable **Developer mode**.
-3. Click **Load unpacked** and select this `marketplace-feature-flags` folder.
+3. Click **Load unpacked** and select this `feature-flags-manager` folder.
 4. Pin the extension and open it on any web page.
 
 ## Regenerate icons
